@@ -1,0 +1,57 @@
+The Core of Ai is very important to be known these days
+LLM
+An LLM (Large Language Model) is a type of artificial intelligence trained on vast amounts of text data to understand, generate, and work with human language.
+How an LLM works
+1. Training: The model learns patterns, grammar, facts, reasoning styles, and relationships between words from massive text datasets.
+2. Prediction: Given some text, it predicts the most likely next word (or token).
+3. Generation: By repeatedly predicting the next token, it can create sentences, answer questions, write code, summarize text, and more.
+We have LLMs like chatgpt,gemeini etc.
+We can ask them any set of information,The requested information is requested using an input called as prompt given by the user
+These tools (LLM Tools) give us the output
+The better the prompt the better is the output
+
+Prompt Engineering : The better the prompt the better is the output given by LLM tools.To get precise output we must define every task, context, constraint, requirement etc. as in input to the LLM.
+
+Generative Ai : It is a new branch of Ai that can create new content such as Text,Images,Code,Audio etc.It uses some of the models of Ai ,generating something like images,videos etc is known as Generative Ai.
+
+*The use of Ai has been in the industry for a long time but it has been made accessible for common use recently
+
+The basic of prompt engineering is to write as much as possible to get desired and precise output
+
+Ai chatbots : gemini ,chatgpt ,claude are conversational tools.These have limitations to providing information.
+
+Ai Agents : Ai agents are capable of performing actions on the behalf of the user eg. aws ai agents, copilot agents and so on.These are advance while referring to Ai chatbots are they are capable of performing tasks on our behalf
+
+Ai assistance tools : eg. Github Copilot,Cursor Ai are some of the Ai assistance tools
+
+*Using all of them has become a part of our life
+
+Accurate Input —> Useful Output
+
+—>Providing Context
+“Act as a recruiter”
+“Act as a DevOps Engineer”
+
+—> Use Constraints
+World Limit
+Format(table/steps)
+Tone(formal/simple)
+
+—>Use examples
+Model Learns from patterns
+Give examples to get better outputs:
+
+—>Iterative Prompting
+‘Add more details’
+“Format this in a better way”
+
+—> Basic prompt formula
+
+“Role + Task + Context + Constraints + Example”
+
+Eg. Write a docker file for maven web app with static content in it 
+The above gives additional theory for the related file 
+Write only docker file for maven web app with static content in it 
+But the above only gives a single Dockerfile content
+
+
