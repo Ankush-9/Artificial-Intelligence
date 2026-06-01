@@ -55,3 +55,28 @@ Write only docker file for maven web app with static content in it
 But the above only gives a single Dockerfile content
 
 
+*Every word is a token,Most of the companies use their internal LLM models which restrict their info to be regulated within their own models only
+For most DevOps role Ai tools use is ban, but companies use their own internal Ai tools
+For every internal LLM we are required to pay some cost
+Every Token is like a word,The lesser the Token lesser is the cost
+So a precise request yields to a precise output/result
+
+Ai Agents:
+Autonomous systems that take actions without constant human input
+Eg. 
+Github Copilot : Auto fix PR issues or manage repo tasks
+AWS AI OPS Agent : Auto detect anomalies and scale infrastructure
+Kubernetes Autio Healing Agent : Restarts crashed pods automatically
+*Agents are paid
+
+Ai Assistants
+Tools that support engineers by generating code ,configuration ,or suggestions
+Eg.
+Github Copilot : Writes Dockerfiles, YAML, Terraform
+Cursor Ai Assistant : Edits Codebases end to end
+
+*Knowing Core of Ai requires Knowledge of Python
+
+*Refer to notes for a health check bash script
+
+
