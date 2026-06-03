@@ -1,82 +1,427 @@
-The Core of Ai is very important to be known these days
-LLM
-An LLM (Large Language Model) is a type of artificial intelligence trained on vast amounts of text data to understand, generate, and work with human language.
-How an LLM works
-1. Training: The model learns patterns, grammar, facts, reasoning styles, and relationships between words from massive text datasets.
-2. Prediction: Given some text, it predicts the most likely next word (or token).
-3. Generation: By repeatedly predicting the next token, it can create sentences, answer questions, write code, summarize text, and more.
-We have LLMs like chatgpt,gemeini etc.
-We can ask them any set of information,The requested information is requested using an input called as prompt given by the user
-These tools (LLM Tools) give us the output
-The better the prompt the better is the output
+# Core Concepts of AI
 
-Prompt Engineering : The better the prompt the better is the output given by LLM tools.To get precise output we must define every task, context, constraint, requirement etc. as in input to the LLM.
+Artificial Intelligence (AI) has been used in the industry for many years. However, recent advancements have made AI accessible to the general public through tools such as ChatGPT, Gemini, Claude, GitHub Copilot, Cursor AI, and many others.
 
-Generative Ai : It is a new branch of Ai that can create new content such as Text,Images,Code,Audio etc.It uses some of the models of Ai ,generating something like images,videos etc is known as Generative Ai.
+Understanding the core concepts of AI is becoming increasingly important for modern engineers.
 
-*The use of Ai has been in the industry for a long time but it has been made accessible for common use recently
+---
 
-The basic of prompt engineering is to write as much as possible to get desired and precise output
+# Large Language Models (LLMs)
 
-Ai chatbots : gemini ,chatgpt ,claude are conversational tools.These have limitations to providing information.
+A **Large Language Model (LLM)** is a type of Artificial Intelligence trained on massive amounts of text data to understand, generate, and work with human language.
 
-Ai Agents : Ai agents are capable of performing actions on the behalf of the user eg. aws ai agents, copilot agents and so on.These are advance while referring to Ai chatbots are they are capable of performing tasks on our behalf
+## Examples of LLMs
 
-Ai assistance tools : eg. Github Copilot,Cursor Ai are some of the Ai assistance tools
+* ChatGPT
+* Gemini
+* Claude
+* Llama
 
-*Using all of them has become a part of our life
+## How an LLM Works
 
-Accurate Input —> Useful Output
+### 1. Training
 
-—>Providing Context
-“Act as a recruiter”
-“Act as a DevOps Engineer”
+The model learns:
 
-—> Use Constraints
-World Limit
-Format(table/steps)
-Tone(formal/simple)
+* Language patterns
+* Grammar
+* Facts
+* Reasoning styles
+* Relationships between words
 
-—>Use examples
-Model Learns from patterns
-Give examples to get better outputs:
+using large datasets collected from books, websites, articles, documentation, and other text sources.
 
-—>Iterative Prompting
-‘Add more details’
-“Format this in a better way”
+### 2. Prediction
 
-—> Basic prompt formula
+Given some text, the model predicts the most likely next word (or token).
 
-“Role + Task + Context + Constraints + Example”
+### 3. Generation
 
-Eg. Write a docker file for maven web app with static content in it 
-The above gives additional theory for the related file 
-Write only docker file for maven web app with static content in it 
-But the above only gives a single Dockerfile content
+By repeatedly predicting the next token, the model can:
 
+* Answer questions
+* Generate code
+* Summarize content
+* Create documentation
+* Assist with problem-solving
+* Generate creative content
 
-*Every word is a token,Most of the companies use their internal LLM models which restrict their info to be regulated within their own models only
-For most DevOps role Ai tools use is ban, but companies use their own internal Ai tools
-For every internal LLM we are required to pay some cost
-Every Token is like a word,The lesser the Token lesser is the cost
-So a precise request yields to a precise output/result
+---
 
-Ai Agents:
-Autonomous systems that take actions without constant human input
-Eg. 
-Github Copilot : Auto fix PR issues or manage repo tasks
-AWS AI OPS Agent : Auto detect anomalies and scale infrastructure
-Kubernetes Autio Healing Agent : Restarts crashed pods automatically
-*Agents are paid
+# Prompts
 
-Ai Assistants
-Tools that support engineers by generating code ,configuration ,or suggestions
-Eg.
-Github Copilot : Writes Dockerfiles, YAML, Terraform
-Cursor Ai Assistant : Edits Codebases end to end
+A **Prompt** is the input provided by the user to an LLM.
 
-*Knowing Core of Ai requires Knowledge of Python
+Example:
 
-*Refer to notes for a health check bash script
+```text
+Write a Dockerfile for a Maven web application.
+```
 
+The quality of the prompt directly affects the quality of the output.
+
+> Better Prompt → Better Output
+
+---
+
+# Prompt Engineering
+
+**Prompt Engineering** is the practice of writing prompts that help AI models generate accurate, relevant, and useful responses.
+
+To obtain precise output, clearly define:
+
+* Task
+* Context
+* Constraints
+* Requirements
+* Expected Format
+
+## Why Prompt Engineering Matters
+
+The more clearly you explain your requirements, the more accurate the output becomes.
+
+### Example
+
+Prompt:
+
+```text
+Write a Dockerfile for a Maven web application.
+```
+
+The model may provide:
+
+* Dockerfile
+* Additional explanation
+* Theory
+
+Improved Prompt:
+
+```text
+Write only the Dockerfile for a Maven web application.
+Do not include explanations.
+```
+
+The model returns only the required Dockerfile.
+
+---
+
+# Prompt Engineering Techniques
+
+## 1. Provide Context
+
+Tell the model which role it should assume.
+
+Examples:
+
+```text
+Act as a Recruiter.
+Act as a DevOps Engineer.
+Act as a Cloud Architect.
+```
+
+---
+
+## 2. Use Constraints
+
+Specify limitations and requirements.
+
+Examples:
+
+* Word limit
+* Format
+* Tone
+
+```text
+Provide output in a table format.
+Explain in simple language.
+Limit response to 100 words.
+```
+
+---
+
+## 3. Use Examples
+
+LLMs learn patterns effectively when examples are provided.
+
+Example:
+
+```text
+Generate output similar to the following example...
+```
+
+Providing examples often improves response quality.
+
+---
+
+## 4. Iterative Prompting
+
+Improve outputs through follow-up prompts.
+
+Examples:
+
+```text
+Add more details.
+Format this better.
+Explain with an example.
+```
+
+Prompting is usually an iterative process.
+
+---
+
+## 5. Basic Prompt Formula
+
+```text
+Role + Task + Context + Constraints + Example
+```
+
+### Example
+
+```text
+Act as a DevOps Engineer.
+
+Write a Dockerfile for a Maven web application.
+
+Return only the Dockerfile.
+
+Do not include explanations.
+```
+
+---
+
+# Generative AI
+
+**Generative AI** is a branch of Artificial Intelligence that creates new content.
+
+It can generate:
+
+* Text
+* Images
+* Code
+* Audio
+* Video
+
+## Examples
+
+* ChatGPT
+* Gemini
+* Claude
+* DALL-E
+* Midjourney
+
+Generating new content using AI models is known as **Generative AI**.
+
+---
+
+# AI Chatbots
+
+AI Chatbots are conversational systems designed to interact with users and provide information.
+
+## Examples
+
+* ChatGPT
+* Gemini
+* Claude
+
+## Capabilities
+
+* Answer questions
+* Explain concepts
+* Generate content
+* Provide recommendations
+
+## Limitations
+
+* Primarily focused on conversations.
+* Generally do not perform actions on behalf of users.
+
+---
+
+# AI Agents
+
+AI Agents are autonomous systems capable of performing actions on behalf of users with minimal human intervention.
+
+## Characteristics
+
+* Goal-oriented
+* Autonomous
+* Can interact with tools and systems
+* Can perform actions without continuous user input
+
+## Examples
+
+### GitHub Copilot Agent
+
+Can:
+
+* Auto-fix Pull Request issues
+* Manage repository tasks
+* Suggest code changes
+
+### AWS AIOps Agent
+
+Can:
+
+* Detect anomalies
+* Monitor infrastructure
+* Trigger scaling actions
+
+### Kubernetes Auto-Healing Agent
+
+Can:
+
+* Detect failed workloads
+* Restart crashed pods
+* Maintain cluster health
+
+> AI Agents are generally paid services.
+
+---
+
+# AI Assistants
+
+AI Assistants help engineers by generating code, configurations, documentation, and suggestions.
+
+## Examples
+
+### GitHub Copilot
+
+Can generate:
+
+* Dockerfiles
+* YAML files
+* Terraform configurations
+* Application code
+
+### Cursor AI
+
+Can:
+
+* Edit codebases
+* Refactor code
+* Generate new features
+* Assist with debugging
+
+## Key Difference
+
+| AI Assistant              | AI Agent                 |
+| ------------------------- | ------------------------ |
+| Assists users             | Performs actions         |
+| Requires user supervision | Can operate autonomously |
+| Suggestion-oriented       | Action-oriented          |
+
+---
+
+# Tokens and Cost Optimization
+
+## What is a Token?
+
+A token is the basic unit processed by an LLM.
+
+A token may represent:
+
+* A word
+* Part of a word
+* Punctuation
+* Special characters
+
+## Why Tokens Matter
+
+Most commercial LLMs charge based on token usage.
+
+```text
+More Tokens = Higher Cost
+Fewer Tokens = Lower Cost
+```
+
+Therefore:
+
+* Precise prompts reduce unnecessary tokens.
+* Better prompts improve efficiency.
+* Better prompts can reduce operational costs.
+
+> Accurate Input → Useful Output
+
+---
+
+# Enterprise LLM Usage
+
+Many organizations use their own internal LLMs instead of public AI systems.
+
+## Reasons
+
+* Security
+* Compliance
+* Data Privacy
+* Intellectual Property Protection
+
+## Benefits
+
+* Company data remains internal.
+* Information is governed by organizational policies.
+* Sensitive information is protected.
+
+In many DevOps and enterprise environments, public AI tools may be restricted, while approved internal AI solutions are allowed.
+
+---
+
+# AI in DevOps
+
+AI is increasingly integrated into DevOps workflows.
+
+## Common Use Cases
+
+* Infrastructure automation
+* Monitoring
+* Incident response
+* Code generation
+* Documentation generation
+* Configuration management
+
+---
+
+# Learning Recommendations
+
+To understand AI more deeply, learn:
+
+* Python Programming
+* Machine Learning Fundamentals
+* LLM Concepts
+* Prompt Engineering
+* Generative AI
+
+> Python is one of the most widely used programming languages in AI development and automation.
+
+---
+
+# Important Takeaways
+
+* AI has existed in the industry for many years but has recently become widely accessible.
+* Better prompts generally produce better outputs.
+* Prompt Engineering improves response quality.
+* AI Chatbots provide information.
+* AI Agents perform actions.
+* AI Assistants help users complete tasks.
+* Tokens impact AI usage costs.
+* Enterprises often use internal LLMs for security and compliance reasons.
+
+---
+
+# Summary
+
+| Concept            | Description                                |
+| ------------------ | ------------------------------------------ |
+| LLM                | AI model trained on large text datasets    |
+| Prompt             | Input provided to an LLM                   |
+| Prompt Engineering | Crafting better prompts for better outputs |
+| Generative AI      | AI that creates new content                |
+| AI Chatbot         | Conversational AI system                   |
+| AI Agent           | Autonomous system that performs actions    |
+| AI Assistant       | Tool that assists users with tasks         |
+| Token              | Basic unit processed by an LLM             |
+| Enterprise LLM     | Internal organizational AI model           |
+
+## Golden Rule
+
+> **Accurate Input → Useful Output**
 
